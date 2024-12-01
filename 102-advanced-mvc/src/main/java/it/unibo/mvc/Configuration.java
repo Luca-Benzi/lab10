@@ -99,7 +99,7 @@ public final class Configuration {
             return this;
         }
 
-        /**
+        /**  
          * @return a configuration
          */
         public final Configuration build() {
