@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 /**
@@ -46,7 +47,7 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
                         throw new IllegalArgumentException();
                 }
             }
-        } catch (final IOException  | IllegalArgumentException e)  {
+        } catch (final IOException  | IllegalArgumentException | NullPointerException | NoSuchElementException e)  {
             System.err.println("Error: " + e.getMessage());
             displayError("Configuration failed, using default values instead");
         }
